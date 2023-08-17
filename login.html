@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">INMD</h2>
+            </div>
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Login</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Acerca de</a>
+                </li>
+                <li class="nav__items">
+                    <a href="contacto.html" class="nav__links">Contacto</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">FQA</a>
+                </li>
+                <img src="./imagenes/circle.svg" class="nav__close">
+            </ul>
+            <div class="nav__menu">
+                <img src="./imagenes/menu.svg" class="nav__img">
+            </div>
+        </nav>
+    <div class="content">
+        <h2>Nombre del Hospital</h2>
+        <form action="procesar_login.html" method="post">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="Email" placeholder="Email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <div class="checkbox">
+                <input type="checkbox" id="mantenerme_logeado" name="mantenerme_logeado">
+                <label for="mantenerme_logeado">keep me login</label>
+            </div>
+            <hr>________________________________________________________________________________________________________________________________________
+
+
+        <footer>
+            <button type="button" id="loginButton" class="login_button">Login</button>
+            <script>
+                document.getElementById('loginButton').addEventListener('click', function() {
+                    window.location.href = './confirmacion.html';
+                });
+            </script>
+            <div class="social-buttons">
+                <button type="submit" class="google_button">
+                    <img src="./imagenes/google.svg">
+                    Login with Google
+                </button>
+                <button type="submit" class="login_facebook">
+                    <img src="./imagenes/facebook.svg">
+                    Login with Facebook
+                </button>           
+            </div> 
+            <p>Don't have an account? <a href="crear_cuenta.html">Create new account</a></p>
+        </footer>
+        </form>
+    </div>
+    <script src="./prueba1.js"></script>
+
+</body>
+</html>

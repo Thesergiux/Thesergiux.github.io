@@ -1,0 +1,207 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+    --padding-container: 100px 0;
+    --color-title: rgb(8, 1, 52);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000ec;
+    opacity: 0.8;
+    background-color: #DDF4F3;
+    opacity: 0.8;
+    background-color: #DDF4F3;
+    opacity: 0.8;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #DDF4F3 4px ), repeating-linear-gradient( #bedbc455, #DDF4F3 );    background-size: 4px 4px;    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: -1;
+
+}
+
+.nav{
+    --padding-container: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__title{
+    font-weight: 300;
+}
+
+.nav__link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.nav__items{
+    list-style: none;
+}
+
+
+.nav__links{
+    color: rgb(27, 12, 227);
+    text-decoration: none;
+}
+
+.nav__menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__img{
+    display: block;
+    width: 30px;
+}
+
+.nav__close{
+    display: var(--show,none);
+}
+
+
+.subtitle{
+    color: #0000ec;
+}
+
+
+
+#contacto {
+    background-color: rgb(163, 239, 213);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#contacto h2, #contacto h3 {
+    color: #6c757d;
+}
+
+#contacto p {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contacto form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#contacto form input[type="text"],
+#contacto form input[type="email"],
+#contacto form input[type="tel"],  
+#contacto form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #6c757d;
+}
+
+
+#contacto textarea {
+    height: 100px; 
+}
+
+#contacto form input[type="submit"] {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    grid-column: span 2;
+}
+
+#contacto form input[type="submit"]:hover {
+    background-color: #5a6268;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(163, 239, 213);
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.contact-form .form-row:last-child {
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form .form-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.contact-form .form-group:last-child {
+    margin-right: 0;
+}
+
